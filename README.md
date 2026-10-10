@@ -190,7 +190,7 @@ The instructions below assume Windows PowerShell.
 Replace the placeholder with the actual URL after publishing the repository to GitHub.
 
 ```powershell
-git clone https://github.com/YOUR_USERNAME/TicketMindAI.git
+git clone https://github.com/abdulghaffarcool/TicketMindAI.git
 cd TicketMindAI
 ```
 
