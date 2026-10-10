@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicketMind AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <div class="logo">TM</div>
+            <div>
+                <h1>TicketMind AI</h1>
+                <p>Intelligent Support Ticket Analysis</p>
+            </div>
+            <span class="api-badge">AI Powered</span>
+        </header>
+
+        <section class="panel">
+            <h2>Classify a support ticket</h2>
+            <p class="description">
+                Enter a customer message to identify its intent and determine
+                whether the prediction needs human review.
+            </p>
+
+            <form id="ticket-form">
+                <label for="ticket-text">Customer message</label>
+                <textarea
+                    id="ticket-text"
+                    placeholder="Example: My bank card is not working..."
+                    maxlength="5000"
+                    required
+                ></textarea>
+
+                <div class="input-footer">
+                    <span id="char-count">0 / 5000</span>
+                    <button id="classify-btn" type="submit">
+                        Classify Ticket →
+                    </button>
+                </div>
+            </form>
+
+            <p id="message" role="status" aria-live="polite"></p>
+        </section>
+
+        <section id="result-panel" class="panel result-panel" hidden>
+            <div class="result-heading">
+                <div>
+                    <p class="eyebrow">ANALYSIS RESULT</p>
+                    <h2>Prediction details</h2>
+                </div>
+                <span id="review-status" class="status"></span>
+            </div>
+
+            <div class="result-grid">
+                <div class="result-card">
+                    <p>Predicted intent</p>
+                    <h3 id="intent">—</h3>
+                </div>
+                <div class="result-card">
+                    <p>Model confidence</p>
+                    <h3 id="confidence">—</h3>
+                    <div class="progress">
+                        <div id="confidence-bar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <p id="result-note" class="result-note"></p>
+        </section>
+
+        <footer>
+            TicketMind AI · Banking77 intent classification · PyTorch + FastAPI
+        </footer>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
