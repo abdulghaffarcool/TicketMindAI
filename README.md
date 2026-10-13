@@ -4,6 +4,14 @@
 
 TicketMind AI analyzes a customer support message, predicts its intent, estimates the model's confidence, and recommends whether the ticket can be accepted automatically or should receive manual review.
 
+## Screenshots
+
+### Ticket Classification Interface
+![TicketMind AI interface](screenshots/ticketmind-ui.png)
+
+### API Documentation
+![FastAPI Swagger documentation](screenshots/api-docs.png)
+
 ## Features
 
 * **AI-powered classification:** Predicts one of 77 customer-support intent categories.
